@@ -1,7 +1,23 @@
-export interface Effect {
+export enum EffectName {
+  VI = 'vi',
+  SA = 'sa',
+  PU = 'pu',
+  IC = 'ic',
+  DTF = 'dtf',
+  DFF = 'dff',
+  DEF = 'def',
+  DAF = 'daf',
+  PP = 'pp',
+  II = 'ii',
+  TA = 'ta',
+  RP = 'rp',
+  RAP = 'rap',
+}
+
+export type Effect = {
   item_id: number;
   id: number;
-  name: string;
+  name: EffectName;
   type: string;
   min: number;
   max: number;
@@ -11,7 +27,7 @@ export interface Effect {
   spellDesc: null | string;
 }
 
-export interface Ingredient {
+export type Ingredient = {
   item_id: number;
   id: number;
   name: string;
@@ -19,7 +35,7 @@ export interface Ingredient {
   count: number;
 }
 
-export interface Data {
+export type Data = {
   id: number;
   official: number;
   picture: number;
@@ -53,6 +69,6 @@ export interface Data {
   weapon: null | string;
 }
 
-export interface Json1 {
+export type Json1 = {
   data: Data;
 }
