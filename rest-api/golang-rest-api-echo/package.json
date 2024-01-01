@@ -1,0 +1,6 @@
+{
+  "name": "golang-rest-api-echo",
+  "scripts": {
+    "start": "go run server.go"
+  }
+}
