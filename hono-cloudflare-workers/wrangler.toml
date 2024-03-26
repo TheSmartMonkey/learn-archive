@@ -1,4 +1,4 @@
-name = "hono-clouflare-workers"
+name = "hono-cloudflare-workers"
 compatibility_date = "2023-12-01"
 
 # [vars]
