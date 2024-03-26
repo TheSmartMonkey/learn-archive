@@ -1,0 +1,12 @@
+{
+  "name": "simple-json-parser",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx ts-node main.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
