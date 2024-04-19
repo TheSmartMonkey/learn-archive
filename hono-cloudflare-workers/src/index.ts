@@ -1,6 +1,10 @@
 import { Hono } from 'hono';
 
-const app = new Hono();
+type Bindings = {
+  STAGE: string;
+};
+
+const app = new Hono<{ Bindings: Bindings }>();
 
 app.get('/', (c) => {
   return c.text('Hello Hono!sss');
@@ -8,7 +12,8 @@ app.get('/', (c) => {
 
 app.get('/todo/:todoId', (c) => {
   return c.json({
-    message: c.req.param()
+    stage: c.env.STAGE,
+    todoId: c.req.param('todoId'),
   });
 });
 
